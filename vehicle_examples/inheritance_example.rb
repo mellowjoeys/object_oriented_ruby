@@ -1,5 +1,4 @@
 class Vehicle
-  attr_reader :speed
   def initialize
     @speed = 0
     @direction = 'north'
@@ -21,7 +20,7 @@ end
 
 class Car < Vehicle
   def initialize(options)
-    super(options)
+    super()
     @fuel = options[:fuel]
     @make = options[:make]
     @model = options[:model]
@@ -34,24 +33,31 @@ end
 
 class Bike < Vehicle
   def initialize(options)
-    super(options)
+    super()
     @type = options[:type]
     @weight = options[:weight]
     @gears = options[:gears]
   end
 
- attr_reader :speed
   def ring_bell
     puts "Ring ring!"
   end
 end
 
-car = Car.new(fuel: "ethanol", make: "Toyota", model: "Corolla")
+car = Car.new(
+              fuel: "ethanol", 
+              make: "Toyota",
+              model: "Corolla"
+              )
 car.accelerate
-p car.speed
+p car
 car.honk_horn
 
-bike = Bike.new(type: "mountain", weight: 15, gears: 21)
+bike = Bike.new(
+               type: "mountain", 
+               weight: 15, 
+               gears: 21
+               )
 bike.accelerate
-p bike.speed
+p bike
 bike.ring_bell
