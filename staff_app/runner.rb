@@ -5,7 +5,7 @@ require "./intern.rb"
 # Runner Code
 # ==========================
 
-employee_1 = Actualize::Employee.new(
+employee_1 = Actualize::Employee.new( # "::" refers to the namespaces we assigned to the classes we are instantiating. 
                           first_name: "Randy", 
                           last_name: "Newman", 
                           salary: 65000, 

@@ -1,7 +1,7 @@
 require "./employee.rb"
 require "./reportable.rb"
 
-module
+module Actualize
   class Manager < Employee 
     include Reportable
     attr_reader :employees
